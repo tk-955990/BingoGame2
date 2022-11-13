@@ -4,12 +4,13 @@ package bingoGame2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 
 public class Machine2 {
 	// １から７５までのランダム配列
-	private int[] numbers;
+	private Integer[] numbers;
 
 	// 抽選回数７５回までのカウント
 	private int index = 0;
@@ -18,19 +19,48 @@ public class Machine2 {
 
 	// コンストラクタ（numbersの初期化）
 	public Machine2() {
-		ArrayList<Integer> bingoNumber = new ArrayList<Integer>();
+/*
+int[] numbers = new int[75];
+			Random rand = new Random();
+		boolean isUnique = true;
 
-		for(int i = 1 ; i <= 75 ; i++) {
-			bingoNumber.add(i);
+		int count = 0;
+
+		while (count < 75) {
+
+			int value = rand.nextInt(75)+1;
+
+			for (int i = 0; i < count; i++) {
+				if(numbers[i] != value) {
+					isUnique = true; 
+				} else {
+					isUnique = false; 
+					break; 
+				}
+			}
+			if (isUnique == true) {
+				numbers[count] = value;
+				count++;
+			}
 		}	
 
-		Collections.shuffle(bingoNumber);
+	}	
+*/
+
+		List<Integer> numberList = new ArrayList<Integer>();
+
+		for(int i = 1 ; i <= 75 ; i++) {
+			numberList.add(i);
+		}	
+
+		Collections.shuffle(numberList);
 
 		// リストから配列に格納
-		numbers = new int[bingoNumber.size()];
-		bingoNumber.toArray();
+		numbers = new Integer[numberList.size()];
+		numberList.toArray();
 
 	}
+
 	// 抽選回数７５回以下かどうかの判定メソッド
 	public boolean hasNext( ) {
 
