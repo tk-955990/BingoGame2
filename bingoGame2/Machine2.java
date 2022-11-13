@@ -42,7 +42,7 @@ public class Machine2 {
 
 	// 抽選メソッド
 	public int next() {
-System.out.println("index=="+ index);
+
 		return numbers[index++];
 
 	}
