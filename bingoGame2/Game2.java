@@ -18,9 +18,8 @@ public class Game2 {
 		while(machine.hasNext()) {
 			int nextflag = 0;
 			sheetBean.print(bingoNumber);
-			int bingoNumber = machine.next();
+			bingoNumber = machine.next();
 
-			machine.next();
 			String str = String.format("%2d", bingoNumber);
 			System.out.println("☆☆☆　当選番号は " + str + " です☆☆☆");
 			if(sheetBean.hit(bingoNumber) == true) {
@@ -58,7 +57,6 @@ public class Game2 {
 			if(nextflag ==2) {
 				break;
 			}
-			//	new SheetBean();
 		}
 		System.out.println("-------- ゲーム終了です --------");
 		System.out.println("                                ");
