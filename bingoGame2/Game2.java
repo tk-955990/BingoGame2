@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class Game2 {
 
 	static Machine2 machine = new Machine2();
-	static int bingoNumber ;
 
 	public static void main(String args[]) {
 		SheetBean2   sheetBean   = new SheetBean2();
 		Machine2 machine = new Machine2();
-	
+		int bingoNumber = 0 ;
+
 		System.out.println("                                ");
 		System.out.println("------ BingoGame Start !! ------");
 		System.out.println("                                ");
 
 		while(machine.hasNext()) {
 			int nextflag = 0;
-			sheetBean.print(bingoNumber);
+			sheetBean.print();
 			bingoNumber = machine.next();
 
 			String str = String.format("%2d", bingoNumber);
@@ -25,12 +25,12 @@ public class Game2 {
 			if(sheetBean.hit(bingoNumber) == true) {
 				if(sheetBean.isBingo() == true) {
 					
-					sheetBean.print(bingoNumber);
+					sheetBean.print();
 					break;
 				}
 				sheetBean.isReach();
 			}  
-			sheetBean.print(bingoNumber);
+			sheetBean.print();
 			while(true ) {
 				System.out.println("ゲームを続けますか？");
 				System.out.println("　はい : 1   いいえ : 2 ");

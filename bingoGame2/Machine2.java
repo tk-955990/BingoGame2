@@ -15,7 +15,6 @@ public class Machine2 {
 	// 抽選回数７５回までのカウント
 	private int index = 0;
 
-	int bingoNumber = 0;
 
 	// コンストラクタ（numbersの初期化）
 	public Machine2() {

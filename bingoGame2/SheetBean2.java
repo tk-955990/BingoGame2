@@ -294,7 +294,7 @@ public class SheetBean2 {
 	}
 
 	// ビンゴシート表示メソッド
-	public void print(int bingoNumber) {
+	public void print() {
 		System.out.println("   B   I   N   G   O ");
 		System.out.println(" ┏━┳━┳━┳━┳━┓");
 
